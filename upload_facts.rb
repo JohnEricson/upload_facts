@@ -35,9 +35,9 @@ puppetdb = Puppet::Node::Facts::Puppetdb.new
 
 ARGV.each do |file|
   puts "Uploading facts from file: #{file}"
-	facts = YAML.load_file(file)
-	options = {}
-	request = Puppet::Node::Facts.indirection.request(:save, facts.name, facts, options)
-	puppetdb.save(request)
+  facts = YAML.load_file(file)
+  options = {}
+  request = Puppet::Node::Facts.indirection.request(:save, facts.name, facts, options)
+  puppetdb.save(request)
 end
 
