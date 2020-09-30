@@ -6,6 +6,10 @@
 # Developed for copying facts from old Puppet Master to new Puppet Master 
 # when upgrading Puppet version.
 #
+# The yaml-files are stored under the facts directory in the puppetserver's
+# yamldir configuration setting. See like this:
+# ls $(puppet config print yamldir)/facts
+#
 # Needs to be ran as a user that has the permissions to read
 # the certificate files. Usually root on a Puppet Master.
 #
